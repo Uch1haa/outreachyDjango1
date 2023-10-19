@@ -1,0 +1,9 @@
+
+<h2>Bug List</h2>
+<ul>
+  {% for bug in bugs %}
+    <li><a href="{% url 'bug_detail' bug.id %}">{{ bug.description }}</a></li>
+  {% empty %}
+    <li>No bugs registered.</li>
+  {% endfor %}
+</ul>
